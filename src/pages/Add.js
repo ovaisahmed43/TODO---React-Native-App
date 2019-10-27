@@ -37,7 +37,7 @@ class Add extends React.Component {
   addFeed = async () => {
     const {text, expiry, selectedColor} = this.state;
 
-    if (text.length > 3) {
+    if (text.length > 0) {
       await this.props.addFeed(
         text,
         'Due ' + moment(expiry).fromNow(),
